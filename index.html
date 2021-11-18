@@ -1,4 +1,4 @@
-<!--The page contain a heading, an input field, and a progress bar-->
+<!--The page contain a heading, an input field, and a strength meter-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,16 +11,20 @@
 </head>
 
 <body>
-    <h1>How good is your password?</h1>
-    <label for="password">Enter Password</label>
-    <input class="pwd" name="password" type="password" id="password" placeholder="Enter password... " oninput="textValueChanged()"> <br>
-    <br><br>
-
-    <label for="Strength">Password Strength</label>
-    <meter class="strengthMeter" name="meter" id="strengthMeter" value="0" max="100"> 
-</meter>
-    <p class="password-strength-text"></p>
-
+    <section class="section">
+        <h1>How good is your password?</h1>
+        <p>
+            <label for="password">Enter Password</label>
+            <input class="password" name="password" type="password" id="password" placeholder="Enter password... "
+                oninput="textValueChanged()">
+        </p>
+        <p>
+            <label for="Strength">Password Strength</label>
+            <meter class="strengthMeter" name="meter" id="strengthMeter" value="0" max="100">
+            </meter>
+        </p>
+        <p class="feedback" id="feedback"></p>
+    </section>
     <script src="script.js"></script>
 
 </body>

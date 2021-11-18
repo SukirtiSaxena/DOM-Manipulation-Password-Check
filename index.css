@@ -1,4 +1,29 @@
-.progress{
+.strengthMeter{
     max-width: 100px;
     height: 20px;    
   }
+
+.section {
+  background-color:beige;
+  font-size: large;
+  font-weight: 300;
+  width:400px;
+  height: 250px;
+  margin: 20px;
+  padding: 20px;
+  border: black;
+  border-style: solid;
+  text-align:left
+}
+
+.password {
+  width: 150px;
+  height: 20px;
+  border: black;
+  border-style: solid
+}
+
+.feedback {
+  font-style: italic;
+}
+
