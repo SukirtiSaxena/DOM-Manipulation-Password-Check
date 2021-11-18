@@ -2,23 +2,11 @@ document.querySelector(".strengthMeter").style.width = 0;
 
 function textValueChanged() {
     const num = document.querySelector(".password").value.length;
-    const text = document.querySelector(".feedback");
     document.querySelector(".strengthMeter").style.width = (num * 5) + "px";
-    strengthMeterBarColor(num * 5, text);
+    strengthMeterColor(num, document.querySelector(".feedback"));
 }
 
-function strengthMeterBarColor(num, text) {
-    if (num < 40) {
-        document.querySelector(".strengthMeter").style.background = "red";
-        text.innerHTML = "Password should be longer";
-    }
-    else if (num < 60) {
-        document.querySelector(".strengthMeter").style.background = "orange";
-        text.innerHTML = "Pretty good";
-    }
-    else if (num > 60) {
-        document.querySelector(".strengthMeter").style.background = "green";
-        text.innerHTML = "Grrrreat!";
-    }
+function strengthMeterColor(num, text) {
+    document.querySelector(".strengthMeter").style.background = (num < 8) ? "red" : (num < 12) ? "orange" : "green";
+    text.innerHTML = (num < 8) ? "Password should be longer" : (num < 12) ? "Pretty good" : "Grrrreat!";
 }
-
