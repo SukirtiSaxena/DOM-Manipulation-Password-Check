@@ -6,16 +6,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet" />
     <title>Password strength check</title>
 </head>
 
 <body>
     <h1>How good is your password?</h1>
-    <label for="password">Password</label>
-    <input type="text" id="myText" placeholder="Enter password... " oninput="textValueChanged()"> <br>
+    <label for="password">Enter Password</label>
+    <input class="pwd" name="password" type="password" id="password" placeholder="Enter password... " oninput="textValueChanged()"> <br>
+    <br><br>
 
     <label for="Strength">Password Strength</label>
-    <progress class="progress__change" id="progress" value="0" max="100"> </progress>
+    <meter class="strengthMeter" name="meter" id="strengthMeter" value="0" max="100"> 
+</meter>
+    <p class="password-strength-text"></p>
 
     <script src="script.js"></script>
 
